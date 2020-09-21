@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, HostBinding } from '@angular/core';
+import { DestinoViaje } from '../models/destino-viaje.model';
 
 @Component({
   selector: 'app-destino-viaje',
@@ -6,8 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./destino-viaje.component.css']
 })
 export class DestinoViajeComponent implements OnInit {
+  @Input() destino: DestinoViaje;
+  @HostBinding('attr.class') cssClass = 'col-md-4';
 
-  constructor() { }
+  constructor() {
+   }
 
   ngOnInit(): void {
   }
